@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "244761038668",
+    "project_id": "dgacengy",
+    "storage_bucket": "dgacengy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244761038668:android:4fd93b11305d71269689e9",
+        "android_client_info": {
+          "package_name": "br.com.dgagency"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuU0anQ_bLzvH3w75TmLcE1uNPwLLvi8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244761038668:android:fb966f66982e60149689e9",
+        "android_client_info": {
+          "package_name": "com.br.dgagency"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuU0anQ_bLzvH3w75TmLcE1uNPwLLvi8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
