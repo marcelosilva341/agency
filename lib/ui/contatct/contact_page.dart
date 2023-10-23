@@ -30,14 +30,14 @@ class _ContactPageState extends State<ContactPage> {
             await launchUrl(Uri.parse(whatsappURlAndroid));
           }
         },
-        child: const Icon(Icons.whatsapp),
+        child: const Icon(Icons.phone_android),
       ),
       body: ListView(
-        children: [
-          const SizedBox(height: 30),
+        children: const [
+          SizedBox(height: 30),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -51,10 +51,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -69,10 +69,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -87,10 +87,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -105,10 +105,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -122,10 +122,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -140,10 +140,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -157,10 +157,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -175,10 +175,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -192,10 +192,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -210,10 +210,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
@@ -227,10 +227,10 @@ class _ContactPageState extends State<ContactPage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
           Center(
             child: Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 30,
                 ),
