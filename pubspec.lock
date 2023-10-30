@@ -1,4 +1,4 @@
- dependency: transitive
+dependency: transitive
     description:
       name: _flutterfire_internals
       sha256: "1a5e13736d59235ce0139621b4bbe29bc89839e202409081bc667eb3cd20674c"
