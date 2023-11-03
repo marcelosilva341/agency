@@ -5,6 +5,7 @@ import 'package:dg_agency/ui/artist/pages/artist_page.dart';
 import 'package:dg_agency/ui/clips/clip_page.dart';
 import 'package:dg_agency/ui/contatct/contact_page.dart';
 import 'package:dg_agency/ui/depoiments/depoiment_page.dart';
+import 'package:dg_agency/ui/locked_access/locked_access.dart';
 import 'package:dg_agency/ui/send/send_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -46,6 +47,7 @@ class _RootPageState extends State<RootPage> {
                 icon: Icon(Icons.video_call), label: 'Clipes'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.star), label: 'Depoimentos'),
+            BottomNavigationBarItem(icon: Icon(Icons.lock), label: 'Acesso'),
           ]),
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -64,6 +66,9 @@ class _RootPageState extends State<RootPage> {
         ),
       ),
       body: Builder(builder: (context) {
+        if (currentIndex == 6) {
+          return LockedAccess();
+        }
         if (currentIndex == 5) {
           return const DepoimentPage();
         }
