@@ -158,9 +158,9 @@ Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma fig
 }
 
 class Depoiment extends StatelessWidget {
-  String text;
-  String name;
-  String urlImage;
+  final String text;
+  final String name;
+  final String urlImage;
   Depoiment(this.text, this.name, this.urlImage);
 
   @override
