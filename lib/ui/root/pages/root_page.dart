@@ -5,6 +5,7 @@ import 'package:dg_agency/ui/clips/clip_page.dart';
 import 'package:dg_agency/ui/contatct/contact_page.dart';
 import 'package:dg_agency/ui/depoiments/depoiment_page.dart';
 import 'package:dg_agency/ui/locked_access/locked_access.dart';
+import 'package:dg_agency/ui/send/send_page.dart';
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
 import 'package:flutter/material.dart';
 
@@ -56,8 +57,11 @@ class _RootPageState extends State<RootPage> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 28.0, right: 28),
+              padding: const EdgeInsets.only(left: 60.0, right: 60),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -80,7 +84,7 @@ class _RootPageState extends State<RootPage> {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 28.0, right: 28),
+              padding: const EdgeInsets.only(left: 60.0, right: 60),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -103,7 +107,7 @@ class _RootPageState extends State<RootPage> {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 28.0, right: 28),
+              padding: const EdgeInsets.only(left: 60.0, right: 60),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -122,6 +126,28 @@ class _RootPageState extends State<RootPage> {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: SizedBox(
+                height: 50,
+                child: ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SendPage()));
+                    },
+                    child: const Text(
+                      'Envie aqui seu material',
+                      style: TextStyle(color: Colors.black),
+                    )),
+              ),
+            )
           ],
         ));
   }
@@ -138,8 +164,8 @@ class ContainerMenu extends StatelessWidget {
     return GestureDetector(
         onTap: onTap,
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.4,
-          height: MediaQuery.of(context).size.height * 0.2,
+          width: MediaQuery.of(context).size.width * 0.3,
+          height: MediaQuery.of(context).size.height * 0.15,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
@@ -149,7 +175,7 @@ class ContainerMenu extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                size: MediaQuery.of(context).size.height * 0.12,
+                size: MediaQuery.of(context).size.height * 0.08,
                 color: Colors.black,
               ),
               Text(label,

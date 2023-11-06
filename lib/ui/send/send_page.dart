@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dg_agency/ui/shared/app_bar_dg.dart';
+import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 
 class SendPage extends StatefulWidget {
@@ -82,73 +84,82 @@ class _SendPageState extends State<SendPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(18.0),
-      child: SizedBox.expand(
-        child: ListView(
-          children: [
-            const SizedBox(
-              height: 260,
-            ),
-            const Text(
-              "Nos envie seu trabalho atraves de um link no drive",
-              style: TextStyle(fontSize: 15, color: Colors.white),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            TextField(
-              controller: nameSand,
-              decoration: const InputDecoration(
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "Seu nome",
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black))),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextField(
-              controller: emailSend,
-              decoration: const InputDecoration(
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "Seu email",
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black))),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextField(
-              controller: linkSend,
-              decoration: const InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: "Digitar link",
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black))),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            SizedBox(
-                width: double.infinity,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: const AppBarDg(),
+      bottomNavigationBar: const BottomBarDg(),
+      body: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: SizedBox.expand(
+          child: ListView(
+            children: [
+              const SizedBox(
                 height: 50,
-                child: ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                    onPressed: () async {
-                      await sendLink(linkSend.text);
-                    },
-                    child: loading
-                        ? const CircularProgressIndicator()
-                        : const Text(
-                            "Enviar",
-                            style: TextStyle(color: Colors.black),
-                          )))
-          ],
+              ),
+              Image.asset(
+                'assets/app-icon.png',
+                height: 200,
+              ),
+              const Text(
+                "Nos envie seu trabalho atraves de um link no drive",
+                style: TextStyle(fontSize: 15, color: Colors.white),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              TextField(
+                controller: nameSand,
+                decoration: const InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    hintText: "Seu nome",
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black))),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextField(
+                controller: emailSend,
+                decoration: const InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    hintText: "Seu email",
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black))),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextField(
+                controller: linkSend,
+                decoration: const InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: "Digitar link",
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black))),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () async {
+                        await sendLink(linkSend.text);
+                      },
+                      child: loading
+                          ? const CircularProgressIndicator()
+                          : const Text(
+                              "Enviar",
+                              style: TextStyle(color: Colors.black),
+                            )))
+            ],
+          ),
         ),
       ),
     );
