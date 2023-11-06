@@ -1,3 +1,5 @@
+import 'package:dg_agency/ui/shared/app_bar_dg.dart';
+import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 
 class DepoimentPage extends StatefulWidget {
@@ -85,75 +87,80 @@ Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma fig
   ];
   @override
   Widget build(BuildContext context) {
-    return SizedBox.expand(
-        child: Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ListView(
-        children: [
-          depoiments[0],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[1],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[2],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[3],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[4],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[6],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[7],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[8],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[9],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[10],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[11],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[12],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[13],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[14],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[15],
-          const SizedBox(
-            height: 10,
-          ),
-          depoiments[16]
-        ],
-      ),
-    ));
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: const AppBarDg(),
+      bottomNavigationBar: const BottomBarDg(),
+      body: SizedBox.expand(
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: [
+            depoiments[0],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[1],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[2],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[3],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[4],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[6],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[7],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[8],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[9],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[10],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[11],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[12],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[13],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[14],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[15],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[16]
+          ],
+        ),
+      )),
+    );
   }
 }
 
@@ -161,7 +168,7 @@ class Depoiment extends StatelessWidget {
   final String text;
   final String name;
   final String urlImage;
-  Depoiment(this.text, this.name, this.urlImage);
+  const Depoiment(this.text, this.name, this.urlImage);
 
   @override
   Widget build(BuildContext context) {

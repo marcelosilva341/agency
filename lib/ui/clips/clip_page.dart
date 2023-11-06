@@ -1,3 +1,5 @@
+import 'package:dg_agency/ui/shared/app_bar_dg.dart';
+import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -26,29 +28,34 @@ class _ClipPageState extends State<ClipPage> {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: ids.length,
-        itemBuilder: (context, index) {
-          var id = ids[index];
-          final YoutubePlayerController controller = YoutubePlayerController(
-            initialVideoId: id,
-            flags: const YoutubePlayerFlags(
-              autoPlay: false,
-              mute: false,
-            ),
-          );
-
-          return Padding(
-            padding: const EdgeInsets.all(28.0),
-            child: Container(
-              decoration:
-                  BoxDecoration(border: Border.all(color: Colors.white)),
-              child: YoutubePlayer(
-                controller: controller,
-                showVideoProgressIndicator: true,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: const AppBarDg(),
+      bottomNavigationBar: const BottomBarDg(),
+      body: ListView.builder(
+          itemCount: ids.length,
+          itemBuilder: (context, index) {
+            var id = ids[index];
+            final YoutubePlayerController controller = YoutubePlayerController(
+              initialVideoId: id,
+              flags: const YoutubePlayerFlags(
+                autoPlay: false,
+                mute: false,
               ),
-            ),
-          );
-        });
+            );
+
+            return Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.white)),
+                child: YoutubePlayer(
+                  controller: controller,
+                  showVideoProgressIndicator: true,
+                ),
+              ),
+            );
+          }),
+    );
   }
 }

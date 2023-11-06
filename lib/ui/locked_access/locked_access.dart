@@ -1,3 +1,5 @@
+import 'package:dg_agency/ui/shared/app_bar_dg.dart';
+import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -8,14 +10,25 @@ class LockedAccess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const AppBarDg(),
+      bottomNavigationBar: const BottomBarDg(),
       backgroundColor: Colors.black,
       body: Form(
           key: keyForm,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+          child: ListView(
             children: [
+              Image.asset(
+                'assets/app-icon.png',
+                height: 220,
+              ),
+              const Center(
+                child: Text(
+                  'Acesso restrito DG',
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.only(left: 28.0, right: 28),
+                padding: const EdgeInsets.only(left: 28.0, right: 28, top: 50),
                 child: TextFormField(
                     validator: (value) {
                       if (value == '') {
