@@ -26,143 +26,171 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+            selectedItemColor: Colors.black,
+            unselectedItemColor: Colors.grey,
+            currentIndex: currentIndex,
+            onTap: (value) {
+              currentIndex = value;
+              setState(() {});
+            },
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Inicio',
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.music_note), label: 'Artistas'),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.phone),
+                label: 'Contato',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.video_call_outlined),
+                label: 'Clipes',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.star),
+                label: 'Depoimentos',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.send),
+                label: 'Enviar',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.lock),
+                label: 'Acesso',
+              ),
+            ]),
         backgroundColor: Colors.black,
-        body: ListView(
-          children: [
-            Image.asset(
-              'assets/app-icon.png',
-              height: 150,
-              fit: BoxFit.fitHeight,
-            ),
-            Center(
-              child: Container(
-                color: Colors.black,
-                width: double.infinity,
-                child: DefaultTextStyle(
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 30.0,
-                    fontFamily: 'Bobbers',
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 28.0, right: 28),
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        TyperAnimatedText('ONDE SUA MÚSICA\nVAI MAIS LONGE',
-                            textAlign: TextAlign.center,
-                            textStyle: const TextStyle(fontSize: 17)),
-                      ],
-                      onTap: () {
-                        print("Tap Event");
-                      },
+        body: Builder(builder: (context) {
+          if (currentIndex == 1) {
+            return const ArtistPage();
+          }
+          if (currentIndex == 2) {
+            return const ContactPage();
+          }
+          if (currentIndex == 3) {
+            return const ClipPage();
+          }
+          if (currentIndex == 4) {
+            return const DepoimentPage();
+          }
+          if (currentIndex == 5) {
+            return const SendPage();
+          }
+          if (currentIndex == 6) {
+            return LockedAccess();
+          }
+          return ListView(
+            children: [
+              Image.asset(
+                'assets/app-icon.png',
+                height: 150,
+                fit: BoxFit.fitHeight,
+              ),
+              Center(
+                child: Container(
+                  color: Colors.black,
+                  width: double.infinity,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontFamily: 'Bobbers',
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 28.0, right: 28),
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          TyperAnimatedText('ONDE SUA MÚSICA\nVAI MAIS LONGE',
+                              textAlign: TextAlign.center,
+                              textStyle: const TextStyle(fontSize: 17)),
+                        ],
+                        onTap: () {
+                          print("Tap Event");
+                        },
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 60.0, right: 60),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ContainerMenu('Sobre nós', Icons.person, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const AboutUsPage()));
-                  }),
-                  ContainerMenu('Artistas', Icons.music_note_outlined, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ArtistPage()));
-                  })
-                ],
+              const SizedBox(
+                height: 25,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 60.0, right: 60),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ContainerMenu('Contato', Icons.phone, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ContactPage()));
-                  }),
-                  ContainerMenu('Clipes', Icons.video_collection_sharp, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ClipPage()));
-                  })
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 60.0, right: 60),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ContainerMenu('Depoimentos', Icons.star, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DepoimentPage()));
-                  }),
-                  ContainerMenu('Acesso', Icons.lock, () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => LockedAccess()));
-                  })
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(28.0),
-              child: SizedBox(
-                height: 50,
-                child: ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                    onPressed: () {
+              Padding(
+                padding: const EdgeInsets.only(left: 60.0, right: 60),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ContainerMenu('Sobre nós', Icons.person, () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SendPage()));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text(
-                          'Envie aqui seu material  ',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                        Icon(
-                          Icons.send,
-                          color: Colors.black,
-                        )
-                      ],
-                    )),
+                              builder: (context) => const AboutUsPage()));
+                    }),
+                    ContainerMenu('Artistas', Icons.music_note_outlined, () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ArtistPage()));
+                    })
+                  ],
+                ),
               ),
-            )
-          ],
-        ));
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 60.0, right: 60),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ContainerMenu('Contato', Icons.phone, () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ContactPage()));
+                    }),
+                    ContainerMenu('Clipes', Icons.video_collection_sharp, () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ClipPage()));
+                    })
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 60.0, right: 60),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ContainerMenu('Depoimentos', Icons.star, () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DepoimentPage()));
+                    }),
+                    ContainerMenu('Acesso', Icons.lock, () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LockedAccess()));
+                    })
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+            ],
+          );
+        }));
   }
 }
 

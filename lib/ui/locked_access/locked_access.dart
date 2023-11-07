@@ -1,5 +1,4 @@
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
-import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,7 +10,6 @@ class LockedAccess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarDg(),
-      bottomNavigationBar: const BottomBarDg(),
       backgroundColor: Colors.black,
       body: Form(
           key: keyForm,

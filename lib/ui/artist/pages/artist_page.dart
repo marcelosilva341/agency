@@ -1,7 +1,6 @@
 import 'package:dg_agency/data/models/artist.dart';
 import 'package:dg_agency/data/repositories/artist_repository.dart';
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
-import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -26,7 +25,6 @@ class _ArtistPageState extends State<ArtistPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: const AppBarDg(),
-      bottomNavigationBar: const BottomBarDg(),
       body: SizedBox.expand(
         child: FutureBuilder<List<Artist>>(
           future: repository.getArtists(),

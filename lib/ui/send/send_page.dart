@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
-import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 
 class SendPage extends StatefulWidget {
@@ -87,7 +86,6 @@ class _SendPageState extends State<SendPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: const AppBarDg(),
-      bottomNavigationBar: const BottomBarDg(),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: SizedBox.expand(

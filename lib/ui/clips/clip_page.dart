@@ -31,7 +31,6 @@ class _ClipPageState extends State<ClipPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: const AppBarDg(),
-      bottomNavigationBar: const BottomBarDg(),
       body: ListView.builder(
           itemCount: ids.length,
           itemBuilder: (context, index) {
