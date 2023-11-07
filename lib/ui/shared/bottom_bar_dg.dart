@@ -10,9 +10,12 @@ class BottomBarDg extends StatelessWidget {
         Navigator.pop(context);
       },
       child: Container(
-        color: Colors.white,
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(16), topRight: Radius.circular(16))),
         width: double.infinity,
-        height: 70,
+        height: 55,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [

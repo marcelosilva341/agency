@@ -6,7 +6,6 @@ import 'package:dg_agency/ui/contatct/contact_page.dart';
 import 'package:dg_agency/ui/depoiments/depoiment_page.dart';
 import 'package:dg_agency/ui/locked_access/locked_access.dart';
 import 'package:dg_agency/ui/send/send_page.dart';
-import 'package:dg_agency/ui/shared/app_bar_dg.dart';
 import 'package:flutter/material.dart';
 
 class RootPage extends StatefulWidget {
@@ -28,9 +27,13 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        appBar: const AppBarDg(),
         body: ListView(
           children: [
+            Image.asset(
+              'assets/app-icon.png',
+              height: 150,
+              fit: BoxFit.fitHeight,
+            ),
             Center(
               child: Container(
                 color: Colors.black,
@@ -43,11 +46,12 @@ class _RootPageState extends State<RootPage> {
                     fontFamily: 'Bobbers',
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(28.0),
+                    padding: const EdgeInsets.only(left: 28.0, right: 28),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        TyperAnimatedText('Onde sua música vai mais longe',
-                            textAlign: TextAlign.center),
+                        TyperAnimatedText('ONDE SUA MÚSICA\nVAI MAIS LONGE',
+                            textAlign: TextAlign.center,
+                            textStyle: const TextStyle(fontSize: 17)),
                       ],
                       onTap: () {
                         print("Tap Event");
@@ -58,7 +62,7 @@ class _RootPageState extends State<RootPage> {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 25,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 60.0, right: 60),
@@ -142,9 +146,18 @@ class _RootPageState extends State<RootPage> {
                           MaterialPageRoute(
                               builder: (context) => const SendPage()));
                     },
-                    child: const Text(
-                      'Envie aqui seu material',
-                      style: TextStyle(color: Colors.black),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          'Envie aqui seu material  ',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        Icon(
+                          Icons.send,
+                          color: Colors.black,
+                        )
+                      ],
                     )),
               ),
             )
@@ -176,7 +189,17 @@ class ContainerMenu extends StatelessWidget {
               Icon(
                 icon,
                 size: MediaQuery.of(context).size.height * 0.08,
-                color: Colors.black,
+                color: label.contains('Depoimentos')
+                    ? Colors.yellow[700]
+                    : label.contains('Clipes')
+                        ? Colors.blue
+                        : label.contains('Sobre')
+                            ? Colors.orange
+                            : label.contains('Contato')
+                                ? Colors.purple
+                                : label.contains('Artistas')
+                                    ? Colors.red
+                                    : Colors.black,
               ),
               Text(label,
                   style: const TextStyle(
