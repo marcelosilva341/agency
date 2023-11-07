@@ -37,7 +37,7 @@ class _RootPageState extends State<RootPage> {
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: 'Inicio',
+                label: 'Início',
               ),
               BottomNavigationBarItem(
                   icon: Icon(Icons.music_note), label: 'Artistas'),
