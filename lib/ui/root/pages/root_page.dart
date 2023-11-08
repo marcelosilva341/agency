@@ -131,10 +131,8 @@ class _RootPageState extends State<RootPage> {
                               builder: (context) => const AboutUsPage()));
                     }),
                     ContainerMenu('Artistas', Icons.music_note_outlined, () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ArtistPage()));
+                      currentIndex = 1;
+                      setState(() {});
                     })
                   ],
                 ),
@@ -148,16 +146,12 @@ class _RootPageState extends State<RootPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ContainerMenu('Contato', Icons.phone, () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ContactPage()));
+                      currentIndex = 2;
+                      setState(() {});
                     }),
                     ContainerMenu('Clipes', Icons.video_collection_sharp, () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ClipPage()));
+                      currentIndex = 3;
+                      setState(() {});
                     })
                   ],
                 ),
@@ -171,16 +165,12 @@ class _RootPageState extends State<RootPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ContainerMenu('Depoimentos', Icons.star, () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DepoimentPage()));
+                      currentIndex = 4;
+                      setState(() {});
                     }),
                     ContainerMenu('Acesso', Icons.lock, () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LockedAccess()));
+                      currentIndex = 6;
+                      setState(() {});
                     })
                   ],
                 ),
