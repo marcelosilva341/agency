@@ -93,25 +93,18 @@ class _RootPageState extends State<RootPage> {
                 child: Container(
                   color: Colors.black,
                   width: double.infinity,
-                  child: DefaultTextStyle(
-                    style: const TextStyle(
+                  child: const DefaultTextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       fontSize: 30.0,
                       fontFamily: 'Bobbers',
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 28.0, right: 28),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          TyperAnimatedText('ONDE SUA MÚSICA\nVAI MAIS LONGE',
-                              textAlign: TextAlign.center,
-                              textStyle: const TextStyle(fontSize: 17)),
-                        ],
-                        onTap: () {
-                          print("Tap Event");
-                        },
-                      ),
+                      padding: EdgeInsets.only(left: 28.0, right: 28),
+                      child: Text('ONDE SUA MÚSICA\nVAI MAIS LONGE',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 17)),
                     ),
                   ),
                 ),
