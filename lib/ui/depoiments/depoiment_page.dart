@@ -67,10 +67,6 @@ Márcio Moureira da “som livre” tô passando aqui para dizer que o trabalho 
 Aqui quem fala é o Adriano Souza da “Music Box Brasil” falar da DG essa agência maravilhosa, uma das maiores descobridoras de talentos do Brasil, eles fazem um trabalho incrível incrível, boa parte das novidades aí que aparecem na televisão, as novidades musicais são descobrimentos da DG e cara parabéns por esse excelente atendimento que vocês fazem. É isso aí estamos juntos''',
         'Adriano Souza',
         'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/ef0973d8-dd94-4792-b749-48eb94c9fe5e.jpg'),
-    const Depoiment(
-        'Falar sobre a DG é fácil, a começar falar de Diego,  desse cara incrível que tenho a oportunidade de conhecer, conviver e confiar a ele o meu maior sonho que é cantar. Estamos em uma parceria, que vem a cada dia crescendo mais. Trabalhar com a DG é ter a garantia de que o seu trabalho será feito do jeitinho que vc quer, pois o carinho e amor, que todos os funcionários colocam no nosso trabalho é maravilhoso. Estou muito feliz, com tudo que vem acontecendo na minha carreira e acredito que vou me surpreender ainda mais com a DG. Palavra que me define junto a DG. FELICIDADE! Simbora pra cima, pq foguete não dá ré.',
-        'Marta Santana',
-        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/159aeef4-dbdc-42e7-ac32-b76dc8509d52-e1677638380616.jpg'),
     const Depoiment('''Olá, aqui é a Vivi Lyra 
 Sou artista da DG Agency desde 2018, desde então, me acolheram como uma família. Dando todo suporte na minha carreira, nos mínimos detalhes. Sou grata a DG pela confiança, pelo carinho, pela dedicação. 
 Ser da DG, é um mérito, é uma honra. 
