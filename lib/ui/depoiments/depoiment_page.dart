@@ -1,5 +1,4 @@
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
-import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 
 class DepoimentPage extends StatefulWidget {
@@ -83,7 +82,34 @@ Vivi Lyra''', 'Vivi Lyra',
 
 Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma figura com grande personalidade: Diego Gimenez. Sou eternamente grato por cada ação e conselho desse irmão/pai que a vida me presenteou. É uma extrema satisfação contar com alguém que dispõe de tanta experiência, sempre disposto a agir e caminhar mais longe. A DG é um porto onde a arte ganha repouso e o artista expande sua voz.''',
         'Dani Castro',
-        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/e043c258-208e-4aa4-b9d1-43f7aa40463d-e1677638548179.jpg')
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/e043c258-208e-4aa4-b9d1-43f7aa40463d-e1677638548179.jpg'),
+    const Depoiment(
+        '''A DG Agency realmente é o espelho do seu criador. Um empresa em constante processo de inovação e evolução, jamais permitindo-se fazer mais do mesmo, porque a excelência não é apenas uma palavra, mas sim um compromisso. A busca pela perfeição esta justamente em aliar talento e trabalho na medida certa, o que faz da DG a escolha perfeita para quem busca ir alcançar as estrelas e não apenas observa-las. Vida Longa a Diego Gimenez, seus colaboradores e parceiros. Mais do que uma marca, a certeza de sucesso.
+Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma figura com grande personalidade: Diego Gimenez. Sou eternamente grato por cada ação e conselho desse irmão/pai que a vida me presenteou. É uma extrema satisfação contar com alguém que dispõe de tanta experiência, sempre disposto a agir e caminhar mais longe. A DG é um porto onde a arte ganha repouso e o artista expande sua voz.''',
+        'Pepe Soares',
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/7fb3e27b-8437-46d4-92bc-321cdc46f4f1-e1677638668128.jpg'),
+    const Depoiment(
+        '''Sou o cantor Gui Armelin, artista da DG Agency e estou aqui somente para dizer que essa equipe é maravilhosa! Tenho total confiança em todos que trabalham na empresa e ouso em dizer que minha carreira tomou caminhos bem mais assertivos depois que assinei nosso contrato. Sou totalmente feliz em dizer que sou artista DG Agency! Tamo junto e um abraço.Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma figura com grande personalidade: Diego Gimenez. Sou eternamente grato por cada ação e conselho desse irmão/pai que a vida me presenteou. É uma extrema satisfação contar com alguém que dispõe de tanta experiência, sempre disposto a agir e caminhar mais longe. A DG é um porto onde a arte ganha repouso e o artista expande sua voz.''',
+        'Gui Armelin',
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/d37bba6d-e494-4524-bd0d-afa9a43256d3-e1677638766517.jpg'),
+    const Depoiment(
+        'A DG é nossa parceira há alguns anos. Agradecemos por todos trabalhos que desenvolvemos em conjunto: entrevistas de artistas, pocket show, promoções, entre outros. Vem muito mais por aí”',
+        'Bruna Becker',
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/e6f561e4-9348-4fef-8820-7453ce11a80e-e1677638868383.jpg'),
+    const Depoiment(
+        'A parceria com a DG Agency é muito positiva para a nossa empresa, tendo em vista a proximidade que temos com os artistas sendo a Rádio um elo para apresentar o trabalho e atualizar as novidades aos ouvintes. Além deste aspecto, o mais importante é a forma na qual o Diego Gimenez e a equipe atuam: de forma transparente, parceira e preocupada com a nossa empresa e seus representados. Com as entrevistas formamos conteúdo, aproximamos o ouvinte do seu artista e logo estaremos começando diversas ações presenciais. Isso só é possível com boas parcerias com temos com a DG Agency!',
+        'Daniel Heck',
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/8f6404ad-1f7c-4cbd-81ae-16d6080bd725-e1677638989151.jpg'),
+    const Depoiment(
+        '''Iaê meus amores, tudo bom? Venho aqui trazer meu depoimento sobre o trabalho da “DG AGENCY”.
+
+Eles são incríveis, me dão todo suporte que preciso para as entrevistas nas rádios e demais meios de comunicação, me orientam de como devo me portar e falar.
+
+Foram incríveis durante a gravação do meu clipe, conseguindo me deixar relaxada, falando do clipe a equipe da DG são extremamente profissionais, trouxeram ideias incríveis que fez com que o clipe fluísse perfeitamente deixando melhor do que tinha previsto.
+
+Sem esquecer do incrível suporto deles junto ao meu show, cuidaram de tudo no backstage, iluminação, telão, fogos, fotos, filmagem, já estava tudo pronto e organizado, o que acarretou num show incrível. Em resumo eles são simplesmente d+ ''',
+        'Angélica Espíndola',
+        'https://dgagency.com.br.stephenson.com.br/wp-content/uploads/2023/03/5c632c33-3ea5-462e-8c60-27946b65bf76-e1677639150721.jpg')
   ];
   @override
   Widget build(BuildContext context) {
@@ -155,7 +181,30 @@ Todo esse empenho e cuidado com os mínimos detalhes é fruto da alma de uma fig
             const SizedBox(
               height: 10,
             ),
-            depoiments[16]
+            depoiments[16],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[17],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[18],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[19],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[20],
+            const SizedBox(
+              height: 10,
+            ),
+            depoiments[21],
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       )),
