@@ -194,13 +194,6 @@ Sem esquecer do incrível suporto deles junto ao meu show, cuidaram de tudo no b
               height: 10,
             ),
             depoiments[20],
-            const SizedBox(
-              height: 10,
-            ),
-            depoiments[21],
-            const SizedBox(
-              height: 10,
-            ),
           ],
         ),
       )),
