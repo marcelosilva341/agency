@@ -1,3 +1,4 @@
+import 'package:dg_agency/data/firebase_messagins.dart';
 import 'package:dg_agency/data/repositories/artist_repository.dart';
 import 'package:dg_agency/firebase_options.dart';
 import 'package:dg_agency/ui/root/pages/root_page.dart';
@@ -13,6 +14,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseMessagingProvider().init();
+
   runApp(const App());
 }
 

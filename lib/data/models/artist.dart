@@ -5,5 +5,7 @@ class Artist {
   String instagram;
   String drive;
   String tiktok;
-  Artist(this.name, this.image, this.spotifyUrl, this.instagram, this.drive, this.tiktok);
+  int index;
+  Artist(this.name, this.image, this.spotifyUrl, this.instagram, this.drive,
+      this.tiktok, this.index);
 }

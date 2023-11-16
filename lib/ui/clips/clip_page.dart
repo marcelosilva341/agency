@@ -1,5 +1,4 @@
 import 'package:dg_agency/ui/shared/app_bar_dg.dart';
-import 'package:dg_agency/ui/shared/bottom_bar_dg.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -12,19 +11,15 @@ class ClipPage extends StatefulWidget {
 
 class _ClipPageState extends State<ClipPage> {
   var ids = [
+    's-xZPPJRIyE',
+    'TN8PeHH1MTA',
     'JoGRcANyE9o',
     'dk1ZnqWO98g',
     'etl3nV3Jb04',
-    'GFaHruQaMwU',
-    'j8fCN3I3aT0',
     'rkRk6qUeSLM',
     '3cKoqLTrS-Q',
     '31ieUReDF10',
     'mRz_h3cMB38',
-    'Ja20DAwFp10',
-    'RMJHHgkpz5w',
-    'Ja20DAwFp10',
-    'UhWX1Gf_cv4'
   ];
   @override
   Widget build(BuildContext context) {

@@ -16,8 +16,12 @@ class ArtistRepository {
             artist['spotifyID'] ?? '',
             artist['instagram'],
             artist['drive'],
-            artist['tiktok']));
+            artist['tiktok'],
+            artist['index']));
       }
+      artistsToReturn.sort(
+        (a, b) => a.index.compareTo(b.index),
+      );
       return artistsToReturn;
     } catch (e) {
       throw Exception();
