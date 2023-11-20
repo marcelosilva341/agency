@@ -38,42 +38,62 @@ class TurnesPage extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
         body: SizedBox.expand(
-          child: ListView.builder(
-            itemCount: turnes.length,
-            itemBuilder: (context, index) {
-              var turne = turnes[index];
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Container(
-                      height: 200,
-                      width: 400,
-                      decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(10),
-                              topRight: Radius.circular(10)),
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                turne.image,
-                              ),
-                              filterQuality: FilterQuality.high,
-                              fit: BoxFit.fitWidth)),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      turne.name.toUpperCase(),
-                      style: const TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                  ],
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Artistas que já fizeram nossa bateria de rádios',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 17),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: turnes.length,
+                  itemBuilder: (context, index) {
+                    var turne = turnes[index];
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 200,
+                            width: 400,
+                            decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10)),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                      turne.image,
+                                    ),
+                                    filterQuality: FilterQuality.high,
+                                    fit: BoxFit.fitWidth)),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            turne.name.toUpperCase(),
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 15),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
-              );
-            },
+              ),
+            ],
           ),
         ));
 

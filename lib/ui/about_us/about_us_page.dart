@@ -154,6 +154,24 @@ TEMOS UMA INCRÍVEL EXPERIÊNCIA DE MAIS DE 20 ANOS NO MERCADO DA MÚSICA""",
           const SizedBox(
             height: 30,
           ),
+          Row(
+            children: const [
+              SizedBox(
+                width: 30,
+              ),
+              Text(
+                "Empresas do grupo",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.white),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Image.asset('assets/empresas.jpeg')
         ],
       ),
     );
